@@ -1,0 +1,162 @@
+* { 
+    margin:0px;
+    padding:0px;
+}
+
+header{
+    max-width: 100%;
+    padding: 15px;
+    
+}
+
+header h1{
+   
+    font-size: 26px;
+}
+
+nav{
+    
+    max-width: 100%;
+}
+
+ul{
+    max-width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+
+li {
+    text-decoration: none; 
+    display: inline;   
+    color: white; 
+    font-weight: 300; 
+    padding: 15.1px;
+   
+  }
+
+  p{
+    max-width: 100%;
+    font-size: 15px;
+    text-align: justify;
+    font-weight: 300;
+   
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    gap: 2px; /* Espaçamento entre as colunas */
+}
+
+.image-box {
+    width: 300px;
+    height: 300px;
+    margin-left: auto; /* Muda a margem esquerda para "auto" para posicionar a imagem à direita */
+    overflow: hidden; /* Garante que a imagem não ultrapasse as dimensões da caixa */
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção da imagem e a exibe completamente na caixa */
+}
+
+.form-box {
+    /* Seu estilo para o formulário */
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to top, rgb(29, 89, 142), #7ea6d6);
+    object-fit: cover; /* Mantém a proporção da imagem e a exibe completamente na caixa */
+}
+
+/* Estilização para os rótulos */
+.form-box label {
+    display: block;
+    margin-top: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: white;
+}
+
+.form-box h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 10px;
+    color: white;
+}
+
+/* Estilização para os campos de entrada de texto */
+input[type="text"],
+input[type="email"],
+.form-box textarea {
+    width: 95%;
+    text-align: justify;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Estilização para o botão de envio */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para dispositivos com largura máxima de 767px (telas menores) */
+@media only screen and (max-width: 767px) {
+    .container {
+        grid-template-columns: 1fr; /* Uma coluna para telas menores */
+    }
+
+    .form-box {
+        order: -1; /* Muda a ordem para colocar o formulário acima da imagem */
+    }
+     ul {
+        flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se não couberem */
+        justify-content: flex-start; /* Alinha os itens no início da linha */
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    li {
+        width: 50%; /* Cada link ocupa 50% da largura para ficar lado a lado */
+        box-sizing: border-box; /* Inclui padding e borda no cálculo de largura */
+    }
+
+    a {
+        font-size: 12px; /* Tamanho de fonte menor para telas menores */
+    }
+}
+
+footer {
+    max-width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons a {
+    display:inline-flex;
+  
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+}
